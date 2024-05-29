@@ -59,16 +59,16 @@ function changeImage() {
 function playPauseAudio() {
   if (audioElement.paused) {
     audioElement.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.textContent = 'P';
   } else {
     audioElement.pause();
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = 'P';
   }
 }
 
 function muteAudio() {
   audioElement.muted = !audioElement.muted;
-  muteBtn.textContent = audioElement.muted ? 'Unmute' : 'Mute';
+  muteBtn.textContent = audioElement.muted ? 'U' : 'M';
 }
 
 function changeSong(direction) {
@@ -79,7 +79,7 @@ function changeSong(direction) {
   }
   audioElement.src = songs[currentIndex];
   audioElement.play();
-  playPauseBtn.textContent = 'Pause';
+  playPauseBtn.textContent = 'P';
 }
 
 function updateSeekSlider() {
