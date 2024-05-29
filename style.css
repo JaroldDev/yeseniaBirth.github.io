@@ -1,0 +1,133 @@
+body {
+  font-family: Century Gothic, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* Fondo oscuro por defecto */
+  color: #ddd; /* Color de texto para el modo oscuro */
+}
+
+header {
+  background-color: #0077cc; /* Azul oscuro para el encabezado */
+  color: #fff; /* Texto blanco para el encabezado */
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 600px; /* Establece una altura máxima para las imágenes */
+  width: auto; /* Ajusta automáticamente el ancho */
+  height: auto; /* Ajusta automáticamente la altura */
+  margin-top: 20px;
+  transition: opacity 0.5s ease-in-out; /* Transición suave de opacidad */
+}
+
+img:hover {
+  transform: scale(1.05); /* Escala ligeramente la imagen al pasar el mouse sobre ella */
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards; /* Animación de fundido al entrar */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Opacidad inicial */
+  }
+  to {
+    opacity: 1; /* Opacidad final */
+  }
+}
+
+footer {
+  background-color: #004488; /* Azul medio para el pie de página */
+  color: #fff; /* Texto blanco para el pie de página */
+  padding: 10px;
+  text-align: center;
+  position: fixed; /* Fija el footer en la parte inferior de la pantalla */
+  width: 100%; /* Establece el ancho al 100% */
+  bottom: 0; /* Coloca el footer en la parte inferior */
+}
+
+#audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#audio-player button,
+#audio-player input[type="range"] {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#audio-player button:hover,
+#audio-player input[type="range"]::-webkit-slider-thumb {
+  background-color: #005fa3;
+}
+
+#audio-player input[type="range"] {
+  -webkit-appearance: none;
+  width: 100px;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+#audio-player input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #0077cc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#audio-player input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #0077cc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#audio-player span {
+  color: #ddd;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+/* Utiliza media queries para estilos específicos de dispositivos móviles */
+@media (max-width: 768px) {
+  .container {
+    width: 100%; /* Cambia el ancho al 100% en dispositivos móviles */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Reducir el tamaño de fuente para dispositivos móviles */
+  }
+
+  body {
+    font-size: 14px; /* Reducir el tamaño de fuente para dispositivos móviles */
+  }
+}
